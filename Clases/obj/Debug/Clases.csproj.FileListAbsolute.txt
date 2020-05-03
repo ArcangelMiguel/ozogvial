@@ -1,0 +1,3 @@
+C:\Users\migue\source\repos\Gest\Clases\obj\Debug\Clases.Properties.Resources.resources
+C:\Users\migue\source\repos\Gest\Clases\obj\Debug\Clases.csproj.GenerateResource.cache
+C:\Users\migue\source\repos\Gest\Clases\obj\Debug\Clases.csproj.CoreCompileInputs.cache

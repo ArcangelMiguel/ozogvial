@@ -1,0 +1,13 @@
+C:\Users\migue\source\repos\Gest\Conex\bin\Debug\Conex.dll
+C:\Users\migue\source\repos\Gest\Conex\bin\Debug\Conex.pdb
+C:\Users\migue\source\repos\Gest\Conex\bin\Debug\MySql.Data.dll
+C:\Users\migue\source\repos\Gest\Conex\bin\Debug\Google.Protobuf.dll
+C:\Users\migue\source\repos\Gest\Conex\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\migue\source\repos\Gest\Conex\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\migue\source\repos\Gest\Conex\bin\Debug\Renci.SshNet.dll
+C:\Users\migue\source\repos\Gest\Conex\bin\Debug\MySql.Data.xml
+C:\Users\migue\source\repos\Gest\Conex\obj\Debug\Conexiones.csprojAssemblyReference.cache
+C:\Users\migue\source\repos\Gest\Conex\obj\Debug\Conexiones.csproj.CoreCompileInputs.cache
+C:\Users\migue\source\repos\Gest\Conex\obj\Debug\Conexiones.csproj.CopyComplete
+C:\Users\migue\source\repos\Gest\Conex\obj\Debug\Conex.dll
+C:\Users\migue\source\repos\Gest\Conex\obj\Debug\Conex.pdb

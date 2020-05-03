@@ -1,0 +1,4 @@
+C:\Users\migue\source\repos\Gest\Conexiones\obj\Debug\Conexiones.csprojAssemblyReference.cache
+C:\Users\migue\source\repos\Gest\Conexiones\obj\Debug\Conexiones.Properties.Resources.resources
+C:\Users\migue\source\repos\Gest\Conexiones\obj\Debug\Conexiones.csproj.GenerateResource.cache
+C:\Users\migue\source\repos\Gest\Conexiones\obj\Debug\Conexiones.csproj.CoreCompileInputs.cache

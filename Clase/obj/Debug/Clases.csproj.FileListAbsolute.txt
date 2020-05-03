@@ -1,0 +1,15 @@
+C:\Users\migue\source\repos\Gest\Clase\bin\Debug\Clase.dll
+C:\Users\migue\source\repos\Gest\Clase\bin\Debug\Clase.pdb
+C:\Users\migue\source\repos\Gest\Clase\bin\Debug\Conex.dll
+C:\Users\migue\source\repos\Gest\Clase\bin\Debug\MySql.Data.dll
+C:\Users\migue\source\repos\Gest\Clase\bin\Debug\Google.Protobuf.dll
+C:\Users\migue\source\repos\Gest\Clase\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\migue\source\repos\Gest\Clase\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\migue\source\repos\Gest\Clase\bin\Debug\Renci.SshNet.dll
+C:\Users\migue\source\repos\Gest\Clase\bin\Debug\Conex.pdb
+C:\Users\migue\source\repos\Gest\Clase\bin\Debug\MySql.Data.xml
+C:\Users\migue\source\repos\Gest\Clase\obj\Debug\Clases.csprojAssemblyReference.cache
+C:\Users\migue\source\repos\Gest\Clase\obj\Debug\Clases.csproj.CoreCompileInputs.cache
+C:\Users\migue\source\repos\Gest\Clase\obj\Debug\Clases.csproj.CopyComplete
+C:\Users\migue\source\repos\Gest\Clase\obj\Debug\Clase.dll
+C:\Users\migue\source\repos\Gest\Clase\obj\Debug\Clase.pdb
