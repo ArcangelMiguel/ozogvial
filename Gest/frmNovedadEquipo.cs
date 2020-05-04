@@ -25,7 +25,7 @@ namespace Gest
             apertura();
 
             // cargamos el combo de los equipos
-            try 
+            try
             {
                 DataTable dt = new DataTable();
                 dt = Equipo.partEquipo();
@@ -111,9 +111,28 @@ namespace Gest
             btnAgregaObra.Enabled = true;
             btnAgregaTipo.Enabled = true;
         }
+        public void cargaNovedades()
+        {
+            DataTable dt = new DataTable();
+            dt = MovEquipo.buscarPorEquipo(int.Parse(cmbEquipo.SelectedValue.ToString()));
 
-        //========================  ALGORITMOS DE BOTONERA =======================================
-        private void btnAgregar_Click(object sender, EventArgs e)
+            dgvNovedades.DataSource = dt; dgvNovedades.ReadOnly = true;
+            dgvNovedades.Columns[0].HeaderText = "FECHA";
+            dgvNovedades.Columns[0].Width = 60;
+            dgvNovedades.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvNovedades.Columns[1].HeaderText = "TIPO";
+            dgvNovedades.Columns[1].Width = 100;
+            dgvNovedades.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvNovedades.Columns[2].HeaderText = "DESCRIPCION";
+            dgvNovedades.Columns[2].Width = 280;
+            dgvNovedades.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dgvNovedades.Columns[3].HeaderText = "HORAS / KM";
+            dgvNovedades.Columns[3].Width = 85;
+            dgvNovedades.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+        }
+
+            //========================  ALGORITMOS DE BOTONERA =======================================
+            private void btnAgregar_Click(object sender, EventArgs e)
         {
             alAgregar();
         }
@@ -152,6 +171,7 @@ namespace Gest
                 }
             }
             apertura();
+            cargaNovedades();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -182,6 +202,9 @@ namespace Gest
             Validar.NumerosDecimales(e);
         }
 
-        
+        private void cmbEquipo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cargaNovedades();
+        }
     }
 }

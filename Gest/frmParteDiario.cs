@@ -23,6 +23,7 @@ namespace Gest
             DateTime hoy = DateTime.Now;
             lblFecha.Text = hoy.ToShortDateString();
             apertura();
+            cargaPartes();
             
             try //Extraemos los tipos para llenar un combo
             {               
@@ -52,32 +53,7 @@ namespace Gest
             catch (Exception er)
             {
                 MessageBox.Show("Error: " + er.ToString());
-            }
-
-            try   //Extraemos partes diarios Pendientes y lo mostramos en el datagrid
-            {                
-                DataTable dt = new DataTable();
-                dt = Parte.extraeParte("Pendiente");
-                dgvParteDiario.DataSource = dt;dgvParteDiario.ReadOnly = true;
-                dgvParteDiario.Columns[0].HeaderText = "N°";
-                dgvParteDiario.Columns[0].Width = 30;
-                dgvParteDiario.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dgvParteDiario.Columns[1].HeaderText = "Fecha";
-                dgvParteDiario.Columns[1].Width = 80;
-                dgvParteDiario.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dgvParteDiario.Columns[2].HeaderText = "Tema";
-                dgvParteDiario.Columns[2].Width = 130;
-                dgvParteDiario.Columns[3].HeaderText = "Proveedor";
-                dgvParteDiario.Columns[3].Width = 130;
-                dgvParteDiario.Columns[4].HeaderText = "Detalle";
-                dgvParteDiario.Columns[4].Width = 300;
-                
-            }
-            catch (Exception er)
-            {
-                MessageBox.Show("Error: " + er.ToString());
-            }
-
+            }            
         }
 
         //=======================  METODOS DE BOTONERAS  =====================================
@@ -123,6 +99,7 @@ namespace Gest
                 }
             }
             apertura();
+            cargaPartes();
         }
         private void btnActualizar_Click(object sender, EventArgs e)
         {
@@ -142,6 +119,7 @@ namespace Gest
                 MessageBox.Show("Los datos no se guardaron");
             }
             apertura();
+            cargaPartes();
         }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
@@ -191,9 +169,36 @@ namespace Gest
             cmbProcede.Enabled = false;
             cmbTema.Enabled = false;
         }
+        public void cargaPartes()
+        {
+            try   //Extraemos partes diarios Pendientes y lo mostramos en el datagrid
+            {
+                DataTable dt = new DataTable();
+                dt = Parte.extraeParte("Pendiente");
+                dgvParteDiario.DataSource = dt; dgvParteDiario.ReadOnly = true;
+                dgvParteDiario.Columns[0].HeaderText = "N°";
+                dgvParteDiario.Columns[0].Width = 30;
+                dgvParteDiario.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvParteDiario.Columns[1].HeaderText = "Fecha";
+                dgvParteDiario.Columns[1].Width = 80;
+                dgvParteDiario.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvParteDiario.Columns[2].HeaderText = "Tema";
+                dgvParteDiario.Columns[2].Width = 130;
+                dgvParteDiario.Columns[3].HeaderText = "Proveedor";
+                dgvParteDiario.Columns[3].Width = 130;
+                dgvParteDiario.Columns[4].HeaderText = "Detalle";
+                dgvParteDiario.Columns[4].Width = 300;
 
-        //========================  RUTINAS DE EVENTOS ================================================
-        private void dgvParteDiario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+            }
+            catch (Exception er)
+            {
+                MessageBox.Show("Error: " + er.ToString());
+            }
+        }
+
+
+            //========================  RUTINAS DE EVENTOS ================================================
+            private void dgvParteDiario_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             cmbTema.Text= dgvParteDiario.CurrentRow.Cells[2].Value.ToString();
             cmbProcede.Text= dgvParteDiario.CurrentRow.Cells[3].Value.ToString();

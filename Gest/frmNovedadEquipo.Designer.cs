@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNovedadEquipo));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlBotonera = new System.Windows.Forms.Panel();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -38,6 +40,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pnlEncabezado = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtHoras = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.cmbEquipo = new System.Windows.Forms.ComboBox();
@@ -54,11 +57,13 @@
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgvNovedades = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnlBotonera.SuspendLayout();
             this.pnlEncabezado.SuspendLayout();
-            this.pnlCuerpo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnlCuerpo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNovedades)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlBotonera
@@ -73,7 +78,7 @@
             this.pnlBotonera.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlBotonera.Location = new System.Drawing.Point(0, 0);
             this.pnlBotonera.Name = "pnlBotonera";
-            this.pnlBotonera.Size = new System.Drawing.Size(117, 267);
+            this.pnlBotonera.Size = new System.Drawing.Size(117, 424);
             this.pnlBotonera.TabIndex = 0;
             // 
             // btnBuscar
@@ -181,6 +186,16 @@
             this.pnlEncabezado.Size = new System.Drawing.Size(551, 72);
             this.pnlEncabezado.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(434, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(114, 49);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            // 
             // txtHoras
             // 
             this.txtHoras.Location = new System.Drawing.Point(319, 38);
@@ -205,6 +220,7 @@
             this.cmbEquipo.Name = "cmbEquipo";
             this.cmbEquipo.Size = new System.Drawing.Size(155, 21);
             this.cmbEquipo.TabIndex = 25;
+            this.cmbEquipo.SelectedIndexChanged += new System.EventHandler(this.cmbEquipo_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -236,6 +252,8 @@
             // 
             // pnlCuerpo
             // 
+            this.pnlCuerpo.Controls.Add(this.label2);
+            this.pnlCuerpo.Controls.Add(this.dgvNovedades);
             this.pnlCuerpo.Controls.Add(this.btnAgregaTipo);
             this.pnlCuerpo.Controls.Add(this.btnAgregaObra);
             this.pnlCuerpo.Controls.Add(this.label7);
@@ -247,7 +265,7 @@
             this.pnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlCuerpo.Location = new System.Drawing.Point(117, 72);
             this.pnlCuerpo.Name = "pnlCuerpo";
-            this.pnlCuerpo.Size = new System.Drawing.Size(551, 195);
+            this.pnlCuerpo.Size = new System.Drawing.Size(551, 352);
             this.pnlCuerpo.TabIndex = 2;
             // 
             // btnAgregaTipo
@@ -289,7 +307,7 @@
             this.txtDetalle.Multiline = true;
             this.txtDetalle.Name = "txtDetalle";
             this.txtDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDetalle.Size = new System.Drawing.Size(548, 132);
+            this.txtDetalle.Size = new System.Drawing.Size(548, 79);
             this.txtDetalle.TabIndex = 32;
             // 
             // cmbObra
@@ -330,28 +348,52 @@
             // 
             this.toolTip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(123)))), ((int)(((byte)(52)))));
             // 
-            // pictureBox1
+            // dgvNovedades
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(434, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(114, 49);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
+            this.dgvNovedades.AllowUserToAddRows = false;
+            this.dgvNovedades.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNovedades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvNovedades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNovedades.Location = new System.Drawing.Point(3, 163);
+            this.dgvNovedades.Name = "dgvNovedades";
+            this.dgvNovedades.ReadOnly = true;
+            this.dgvNovedades.RowHeadersVisible = false;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgvNovedades.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvNovedades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvNovedades.Size = new System.Drawing.Size(545, 186);
+            this.dgvNovedades.TabIndex = 36;
+            // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(4, 142);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(542, 18);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "NOVEDADES DEL EQUIPO  SELECCIONADO";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmNovedadEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(668, 267);
+            this.ClientSize = new System.Drawing.Size(668, 424);
             this.Controls.Add(this.pnlCuerpo);
             this.Controls.Add(this.pnlEncabezado);
             this.Controls.Add(this.pnlBotonera);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(684, 306);
             this.MinimizeBox = false;
-            this.MinimumSize = new System.Drawing.Size(684, 306);
             this.Name = "frmNovedadEquipo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "NOVEDADES DE EQUIPOS";
@@ -359,9 +401,10 @@
             this.pnlBotonera.ResumeLayout(false);
             this.pnlEncabezado.ResumeLayout(false);
             this.pnlEncabezado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlCuerpo.ResumeLayout(false);
             this.pnlCuerpo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvNovedades)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -393,5 +436,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Button btnAgregaObra;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridView dgvNovedades;
     }
 }

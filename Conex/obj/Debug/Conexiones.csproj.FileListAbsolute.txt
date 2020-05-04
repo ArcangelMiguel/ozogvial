@@ -27,7 +27,6 @@ C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Conex\bin\Debug\System.Memory.dll
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Conex\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Conex\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Conex\bin\Debug\MySql.Data.xml
-C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Conex\obj\Debug\Conexiones.csprojAssemblyReference.cache
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Conex\obj\Debug\Conexiones.csproj.CoreCompileInputs.cache
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Conex\obj\Debug\Conexiones.csproj.CopyComplete
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Conex\obj\Debug\Conex.dll

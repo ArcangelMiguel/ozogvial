@@ -28,6 +28,8 @@ namespace Clases
         public float NUMERO { get => numero; set => numero = value; }
 
         //==================  Métodos estáticos de la clase ===============================
+        
+        // estrae la totalidad de las novedades
         public static DataTable todoMovEq()
         {
             String cmd = "SELECT id_MovEq, fecha, id_Equipo, id_Obra, tipo, detalle, numero FROM movequipos";
@@ -37,6 +39,7 @@ namespace Clases
             dt = ds.Tables[0];
             return dt;
         }
+        // Extrae novedades por EQUIPO y por TIPO de novedades ============================================
         public static DataTable paraBusqueda(int eqpo, string to)
         {
             String cmd = "SELECT  fecha, detalle, numero FROM movequipos "+
@@ -48,6 +51,19 @@ namespace Clases
             return dt;
         }
 
+        // Extrae todas las novedades por EQUIPO =======================================================
+        public static DataTable buscarPorEquipo(int eqpo)
+        {
+            String cmd = "SELECT  fecha, tipo, detalle, numero FROM movequipos " +
+                "WHERE id_Equipo= " + eqpo;
+            // 
+            DataSet ds = Accesos.datos(cmd); 
+            DataTable dt = new DataTable();
+            dt = ds.Tables[0];
+            return dt;
+        }
+
+        // Almacena los datos del movimiento     =======================================================
         public static int guardaMovEquipo(MovEquipo rep)
         {
             // almacenamos nuevo parte diario. Incluso el idParte tiene valor 0
