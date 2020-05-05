@@ -181,3 +181,4 @@ C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Debug\Gest.csproj.CoreComp
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Debug\Gest.csproj.CopyComplete
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Debug\Gest.exe
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Debug\Gest.pdb
+C:\Users\migue\source\repos\Gest\Gest\obj\Debug\Gest.frmProveedor.resources

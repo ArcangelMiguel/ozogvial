@@ -35,12 +35,13 @@
             this.modelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.temasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movimientosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.partesDiariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novedadesEquiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.remitosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             this.obrasToolStripMenuItem,
             this.toolStripMenuItem1,
             this.modelosToolStripMenuItem,
+            this.toolStripMenuItem2,
             this.tiposToolStripMenuItem,
             this.temasToolStripMenuItem,
             this.toolStripSeparator1,
@@ -100,6 +102,11 @@
             this.temasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.temasToolStripMenuItem.Text = "Temas";
             // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
@@ -137,10 +144,12 @@
             this.remitosToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.remitosToolStripMenuItem.Text = "Remitos";
             // 
-            // toolStripSeparator1
+            // toolStripMenuItem2
             // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem2.Text = "Proveedores";
+            this.toolStripMenuItem2.Click += new System.EventHandler(this.toolStripMenuItem2_Click);
             // 
             // frmMain
             // 
@@ -177,5 +186,6 @@
         private System.Windows.Forms.ToolStripMenuItem remitosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
     }
 }

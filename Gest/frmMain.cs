@@ -42,5 +42,12 @@ namespace Gest
             fmat.MdiParent = this;
             fmat.Show();
         }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+            frmProveedor fpr = new frmProveedor();
+            fpr.MdiParent = this;
+            fpr.Show();
+        }
     }
 }
