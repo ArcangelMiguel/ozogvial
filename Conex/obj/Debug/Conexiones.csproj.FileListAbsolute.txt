@@ -31,3 +31,4 @@ C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Conex\obj\Debug\Conexiones.csproj.C
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Conex\obj\Debug\Conexiones.csproj.CopyComplete
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Conex\obj\Debug\Conex.dll
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Conex\obj\Debug\Conex.pdb
+C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Conex\obj\Debug\Conexiones.csprojAssemblyReference.cache

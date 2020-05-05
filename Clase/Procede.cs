@@ -31,15 +31,23 @@ namespace Clases
             dt = ds.Tables[0];
             return dt;
         }
-
+        public static DataTable extraeTodoProv()
+        {
+            String cmd = "SELECT id_Prov, nombre,direccion,cuit FROM proveedor";
+            // 
+            DataSet ds = Accesos.datos(cmd);
+            DataTable dt = new DataTable();
+            dt = ds.Tables[0];
+            return dt;
+        }
         public static int guardaProced(Procede rep)
         {
             // almacenamos nuevo proveedor. 
             int valor = 0;
             MySqlConnection connn = new MySqlConnection();
             connn = Accesos.UnaConexion();
-            MySqlCommand cmd = new MySqlCommand(String.Format("INSERT INTO proveedor(id_Tipo, nombre,direccion,cuit)" +
-                " VALUES ('{0}','{1}','{2}','{3}')", rep.IDPROV, rep.NOMBRE,rep.DIRECCION, rep.CUIT, connn));
+            MySqlCommand cmd = new MySqlCommand(String.Format("INSERT INTO proveedor(id_Prov, nombre,direccion,cuit)" +
+                " VALUES ({0},'{1}','{2}','{3}')", rep.IDPROV, rep.NOMBRE,rep.DIRECCION, rep.CUIT), connn);
 
             valor = cmd.ExecuteNonQuery();
             connn.Close();
