@@ -87,6 +87,7 @@ C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.frmMovEncontr
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.frmNovedadEquipo.resources
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.frmNuevaObra.resources
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.frmParteDiario.resources
+C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.frmProveedor.resources
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.frmTipos.resources
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.Properties.Resources.resources
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.csproj.GenerateResource.cache

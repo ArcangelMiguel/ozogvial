@@ -77,6 +77,12 @@
     <Compile Include="frmBuscaParte.Designer.cs">
       <DependentUpon>frmBuscaParte.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmHorarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHorarios.Designer.cs">
+      <DependentUpon>frmHorarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="frmBuscaParte.resx">
       <DependentUpon>frmBuscaParte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmHorarios.resx">
+      <DependentUpon>frmHorarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>

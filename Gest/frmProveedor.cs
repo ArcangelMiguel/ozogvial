@@ -51,6 +51,9 @@ namespace Gest
             btnActualizar.Enabled = false;
             btnSalir.Enabled = true;
             pnlEncabezado.Enabled = false;
+            txtNombre.Clear();
+            txtDomicilio.Clear();
+            txtCuit.Clear();
         }
         public void alAgregar()
         {
@@ -60,6 +63,9 @@ namespace Gest
             btnActualizar.Enabled = false;
             btnSalir.Enabled = false;
             pnlEncabezado.Enabled = true;
+            txtNombre.Clear();
+            txtDomicilio.Clear();
+            txtCuit.Clear();
         }
         public void alModificar()
         {

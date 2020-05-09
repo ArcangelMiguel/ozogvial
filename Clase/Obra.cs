@@ -39,7 +39,7 @@ namespace Clases
             MySqlConnection connn = new MySqlConnection();
             connn = Accesos.UnaConexion();
             MySqlCommand cmd = new MySqlCommand(String.Format("INSERT INTO obra(id_Obra, nombre,alias,comitente)" +
-                " VALUES ('{0}','{1}','{2}','{3}')", rep.IDOBRA, rep.NOMBRE,rep.ALIAS, rep.COMITENTE, connn));
+                " VALUES ('{0}','{1}','{2}','{3}')", rep.IDOBRA, rep.NOMBRE,rep.ALIAS, rep.COMITENTE), connn);
 
             valor = cmd.ExecuteNonQuery();
             connn.Close();
