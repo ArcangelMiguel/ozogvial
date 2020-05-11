@@ -15,7 +15,7 @@ namespace Conexiones
             //  server=localhost; database=ozogvial; Uid=root; pwd='MaImEs3321'
             //  server=192.168.0.103; database=ozogvial; Uid=miguel; pwd='1234'
 
-            MySqlConnection conn = new MySqlConnection("server=192.168.0.103; database=ozogvial; Uid=miguel; pwd='1234';");
+            MySqlConnection conn = new MySqlConnection("server=localhost; database=ozogvial; Uid=root; pwd='MaImEs3321';");
             conn.Open();
 
             DataSet DS = new DataSet();
@@ -29,7 +29,7 @@ namespace Conexiones
 
         public static MySqlConnection UnaConexion()
         {
-            MySqlConnection conx = new MySqlConnection("server=192.168.0.103; database=ozogvial; Uid=miguel; pwd='1234';");
+            MySqlConnection conx = new MySqlConnection("server=localhost; database=ozogvial; Uid=root; pwd='MaImEs3321';");
             conx.Open();
 
             return conx;

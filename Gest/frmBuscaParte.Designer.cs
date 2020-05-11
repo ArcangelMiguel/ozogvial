@@ -30,7 +30,7 @@
         {
             this.pnlEncabezado = new System.Windows.Forms.Panel();
             this.btnActualiza = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDetalle = new System.Windows.Forms.TextBox();
             this.btnSalir = new System.Windows.Forms.Button();
             this.cmbDato = new System.Windows.Forms.ComboBox();
             this.cmbBusqueda = new System.Windows.Forms.ComboBox();
@@ -38,8 +38,8 @@
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlCuerpo = new System.Windows.Forms.Panel();
-            this.dgvPartes = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
+            this.dgvPartes = new System.Windows.Forms.DataGridView();
             this.pnlEncabezado.SuspendLayout();
             this.pnlCuerpo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPartes)).BeginInit();
@@ -49,7 +49,7 @@
             // 
             this.pnlEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(171)))), ((int)(((byte)(201)))));
             this.pnlEncabezado.Controls.Add(this.btnActualiza);
-            this.pnlEncabezado.Controls.Add(this.textBox1);
+            this.pnlEncabezado.Controls.Add(this.txtDetalle);
             this.pnlEncabezado.Controls.Add(this.btnSalir);
             this.pnlEncabezado.Controls.Add(this.cmbDato);
             this.pnlEncabezado.Controls.Add(this.cmbBusqueda);
@@ -75,14 +75,14 @@
             this.btnActualiza.UseVisualStyleBackColor = false;
             this.btnActualiza.Click += new System.EventHandler(this.btnActualiza_Click);
             // 
-            // textBox1
+            // txtDetalle
             // 
-            this.textBox1.Location = new System.Drawing.Point(320, 8);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(477, 103);
-            this.textBox1.TabIndex = 37;
+            this.txtDetalle.Location = new System.Drawing.Point(320, 8);
+            this.txtDetalle.Multiline = true;
+            this.txtDetalle.Name = "txtDetalle";
+            this.txtDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtDetalle.Size = new System.Drawing.Size(477, 103);
+            this.txtDetalle.TabIndex = 37;
             // 
             // btnSalir
             // 
@@ -159,6 +159,18 @@
             this.pnlCuerpo.Size = new System.Drawing.Size(800, 329);
             this.pnlCuerpo.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label3.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(3, 3);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(794, 20);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "PARTES DIARIOS ENCONTRADOS";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // dgvPartes
             // 
             this.dgvPartes.AllowUserToAddRows = false;
@@ -171,18 +183,7 @@
             this.dgvPartes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPartes.Size = new System.Drawing.Size(794, 321);
             this.dgvPartes.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label3.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(3, 3);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(794, 20);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "PARTES DIARIOS ENCONTRADOS";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dgvPartes.DoubleClick += new System.EventHandler(this.dgvPartes_DoubleClick);
             // 
             // frmBuscaParte
             // 
@@ -214,7 +215,7 @@
         private System.Windows.Forms.ComboBox cmbBusqueda;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDetalle;
         private System.Windows.Forms.Button btnActualiza;
         private System.Windows.Forms.Label label3;
     }

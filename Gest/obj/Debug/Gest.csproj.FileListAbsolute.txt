@@ -184,3 +184,4 @@ C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Debug\Gest.pdb
 C:\Users\migue\source\repos\Gest\Gest\obj\Debug\Gest.frmProveedor.resources
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Debug\Gest.frmProveedor.resources
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Debug\Gest.frmHorarios.resources
+C:\Users\migue\source\repos\Gest\Gest\obj\Debug\Gest.frmHorarios.resources

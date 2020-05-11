@@ -131,8 +131,8 @@ namespace Clases
             int valor = 0;
             MySqlConnection connn = new MySqlConnection();
             connn = Accesos.UnaConexion();
-            MySqlCommand cmd = new MySqlCommand(String.Format("UPDATE partediario SET id_Parte='{0}',estado='{1}' WHERE id_Parte='{2}'",
-                +rep.IDPARTE, rep.ESTADO, orden), connn);
+            MySqlCommand cmd = new MySqlCommand(String.Format("UPDATE partediario SET id_Parte='{0}',detalle='{1}',estado='{2}' WHERE id_Parte='{3}'",
+                +rep.IDPARTE, rep.DETALLE, rep.ESTADO, orden), connn);
 
             valor = cmd.ExecuteNonQuery();
             connn.Close();

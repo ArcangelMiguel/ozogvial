@@ -53,5 +53,18 @@ namespace Clases
             connn.Close();
             return valor;
         }
+        public static int modificaEstado(Procede rep, int orden)
+        {
+            // aca solamente modificamos los datos del proveedor
+            int valor = 0;
+            MySqlConnection connn = new MySqlConnection();
+            connn = Accesos.UnaConexion();
+            MySqlCommand cmd = new MySqlCommand(String.Format("UPDATE proveedor SET id_Prov='{0}',nombre='{1}',direccion='{2}',cuit='{3}' WHERE id_Prov='{4}'",
+                +rep.IDPROV, rep.NOMBRE, rep.DIRECCION, rep.CUIT, orden), connn);
+
+            valor = cmd.ExecuteNonQuery();
+            connn.Close();
+            return valor;
+        }
     }
 }

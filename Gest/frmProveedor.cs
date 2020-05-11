@@ -119,5 +119,18 @@ namespace Gest
             this.Close();
         }
 
+        private void dgvProveedor_DoubleClick(object sender, EventArgs e)
+        {
+            int orden = int.Parse(dgvProveedor.CurrentRow.Cells[0].Value.ToString());
+            txtNombre.Text = dgvProveedor.CurrentRow.Cells[1].Value.ToString();
+            txtDomicilio.Text = dgvProveedor.CurrentRow.Cells[2].Value.ToString();
+            txtCuit.Text = dgvProveedor.CurrentRow.Cells[3].Value.ToString();
+            alModificar();
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

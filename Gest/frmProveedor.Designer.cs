@@ -39,15 +39,15 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pnlEncabezado = new System.Windows.Forms.Panel();
+            this.txtDomicilio = new System.Windows.Forms.TextBox();
+            this.txtCuit = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvProveedor = new System.Windows.Forms.DataGridView();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtCuit = new System.Windows.Forms.TextBox();
-            this.txtDomicilio = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.pnlEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -101,6 +101,7 @@
             this.btnActualizar.Text = "Actualizar Datos";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnCancelar
             // 
@@ -168,6 +169,27 @@
             this.pnlEncabezado.Name = "pnlEncabezado";
             this.pnlEncabezado.Size = new System.Drawing.Size(542, 100);
             this.pnlEncabezado.TabIndex = 1;
+            // 
+            // txtDomicilio
+            // 
+            this.txtDomicilio.Location = new System.Drawing.Point(65, 69);
+            this.txtDomicilio.Name = "txtDomicilio";
+            this.txtDomicilio.Size = new System.Drawing.Size(291, 20);
+            this.txtDomicilio.TabIndex = 7;
+            // 
+            // txtCuit
+            // 
+            this.txtCuit.Location = new System.Drawing.Point(65, 43);
+            this.txtCuit.Name = "txtCuit";
+            this.txtCuit.Size = new System.Drawing.Size(114, 20);
+            this.txtCuit.TabIndex = 6;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(65, 17);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(271, 20);
+            this.txtNombre.TabIndex = 5;
             // 
             // label4
             // 
@@ -250,27 +272,7 @@
             this.dgvProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProveedor.Size = new System.Drawing.Size(540, 305);
             this.dgvProveedor.TabIndex = 3;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(65, 17);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(271, 20);
-            this.txtNombre.TabIndex = 5;
-            // 
-            // txtCuit
-            // 
-            this.txtCuit.Location = new System.Drawing.Point(65, 43);
-            this.txtCuit.Name = "txtCuit";
-            this.txtCuit.Size = new System.Drawing.Size(114, 20);
-            this.txtCuit.TabIndex = 6;
-            // 
-            // txtDomicilio
-            // 
-            this.txtDomicilio.Location = new System.Drawing.Point(65, 69);
-            this.txtDomicilio.Name = "txtDomicilio";
-            this.txtDomicilio.Size = new System.Drawing.Size(291, 20);
-            this.txtDomicilio.TabIndex = 7;
+            this.dgvProveedor.DoubleClick += new System.EventHandler(this.dgvProveedor_DoubleClick);
             // 
             // frmProveedor
             // 
