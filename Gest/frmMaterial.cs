@@ -199,6 +199,18 @@ namespace Gest
             }
         }
 
-        
+        private void dgvMateriales_DoubleClick(object sender, EventArgs e)
+        {
+            alModificar();
+            cmbTipo.Text = dgvMateriales.CurrentRow.Cells[1].Value.ToString();
+            txtDetalle.Text= dgvMateriales.CurrentRow.Cells[2].Value.ToString();
+            txtUnidad.Text= dgvMateriales.CurrentRow.Cells[3].Value.ToString();
+            txtAdquirido.Text= dgvMateriales.CurrentRow.Cells[4].Value.ToString();
+            txtRecibido.Text=dgvMateriales.CurrentRow.Cells[5].Value.ToString();
+            txtProceso.Text= dgvMateriales.CurrentRow.Cells[6].Value.ToString();
+            txtStock.Text= dgvMateriales.CurrentRow.Cells[7].Value.ToString();
+            txtReferencia.Text= dgvMateriales.CurrentRow.Cells[8].Value.ToString();
+            txtAnota.Text= dgvMateriales.CurrentRow.Cells[9].Value.ToString();
+        }
     }
 }

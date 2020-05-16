@@ -81,6 +81,7 @@ C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\bin\Release\zh-CHT\Microsoft.R
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.csprojAssemblyReference.cache
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.exe.config
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.frmBuscaParte.resources
+C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.frmHorarios.resources
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.frmMain.resources
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.frmMaterial.resources
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.frmMovEncontrados.resources

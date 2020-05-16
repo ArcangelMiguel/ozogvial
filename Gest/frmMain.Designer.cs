@@ -134,22 +134,23 @@
             // partesDiariosToolStripMenuItem
             // 
             this.partesDiariosToolStripMenuItem.Name = "partesDiariosToolStripMenuItem";
-            this.partesDiariosToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.partesDiariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.partesDiariosToolStripMenuItem.Text = "Partes Diarios";
             this.partesDiariosToolStripMenuItem.Click += new System.EventHandler(this.partesDiariosToolStripMenuItem_Click);
             // 
             // novedadesEquiposToolStripMenuItem
             // 
             this.novedadesEquiposToolStripMenuItem.Name = "novedadesEquiposToolStripMenuItem";
-            this.novedadesEquiposToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.novedadesEquiposToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.novedadesEquiposToolStripMenuItem.Text = "Novedades Equipos";
             this.novedadesEquiposToolStripMenuItem.Click += new System.EventHandler(this.novedadesEquiposToolStripMenuItem_Click);
             // 
             // remitosToolStripMenuItem
             // 
             this.remitosToolStripMenuItem.Name = "remitosToolStripMenuItem";
-            this.remitosToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
+            this.remitosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.remitosToolStripMenuItem.Text = "Remitos";
+            this.remitosToolStripMenuItem.Click += new System.EventHandler(this.remitosToolStripMenuItem_Click);
             // 
             // frmMain
             // 

@@ -187,7 +187,7 @@
             // txtAnota
             // 
             this.txtAnota.Location = new System.Drawing.Point(254, 91);
-            this.txtAnota.MaxLength = 10;
+            this.txtAnota.MaxLength = 10000;
             this.txtAnota.Multiline = true;
             this.txtAnota.Name = "txtAnota";
             this.txtAnota.Size = new System.Drawing.Size(362, 102);
@@ -393,8 +393,10 @@
             this.dgvMateriales.RowHeadersVisible = false;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dgvMateriales.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMateriales.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMateriales.Size = new System.Drawing.Size(615, 243);
             this.dgvMateriales.TabIndex = 0;
+            this.dgvMateriales.DoubleClick += new System.EventHandler(this.dgvMateriales_DoubleClick);
             // 
             // frmMaterial
             // 

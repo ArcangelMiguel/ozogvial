@@ -49,5 +49,12 @@ namespace Gest
             fpr.MdiParent = this;
             fpr.Show();
         }
+
+        private void remitosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRemitos frem = new frmRemitos();
+            frem.MdiParent = this;
+            frem.Show();
+        }
     }
 }
