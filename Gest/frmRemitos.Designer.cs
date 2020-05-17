@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRemitos));
             this.pnlBotones = new System.Windows.Forms.Panel();
+            this.btnBuscaRemito = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
@@ -58,7 +59,6 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btnActualiza = new System.Windows.Forms.Button();
-            this.btnBuscaRemito = new System.Windows.Forms.Button();
             this.pnlBotones.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -81,9 +81,24 @@
             this.pnlBotones.Size = new System.Drawing.Size(118, 621);
             this.pnlBotones.TabIndex = 1;
             // 
+            // btnBuscaRemito
+            // 
+            this.btnBuscaRemito.FlatAppearance.BorderSize = 0;
+            this.btnBuscaRemito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscaRemito.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscaRemito.ForeColor = System.Drawing.Color.White;
+            this.btnBuscaRemito.Location = new System.Drawing.Point(3, 157);
+            this.btnBuscaRemito.Name = "btnBuscaRemito";
+            this.btnBuscaRemito.Size = new System.Drawing.Size(111, 26);
+            this.btnBuscaRemito.TabIndex = 22;
+            this.btnBuscaRemito.Text = "Buscar Remitos";
+            this.btnBuscaRemito.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnBuscaRemito.UseVisualStyleBackColor = true;
+            // 
             // btnSalir
             // 
             this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.White;
@@ -371,20 +386,6 @@
             this.btnActualiza.Text = "Agregar";
             this.btnActualiza.UseVisualStyleBackColor = false;
             // 
-            // btnBuscaRemito
-            // 
-            this.btnBuscaRemito.FlatAppearance.BorderSize = 0;
-            this.btnBuscaRemito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscaRemito.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscaRemito.ForeColor = System.Drawing.Color.White;
-            this.btnBuscaRemito.Location = new System.Drawing.Point(3, 157);
-            this.btnBuscaRemito.Name = "btnBuscaRemito";
-            this.btnBuscaRemito.Size = new System.Drawing.Size(111, 26);
-            this.btnBuscaRemito.TabIndex = 22;
-            this.btnBuscaRemito.Text = "Buscar Remitos";
-            this.btnBuscaRemito.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscaRemito.UseVisualStyleBackColor = true;
-            // 
             // frmRemitos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,6 +403,7 @@
             this.Name = "frmRemitos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "MOVIMIENTO DE RECURSOS";
+            this.Load += new System.EventHandler(this.frmRemitos_Load);
             this.pnlBotones.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

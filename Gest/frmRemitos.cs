@@ -21,5 +21,10 @@ namespace Gest
         {
             this.Close();
         }
+
+        private void frmRemitos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
