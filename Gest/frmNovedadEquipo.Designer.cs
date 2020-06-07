@@ -48,6 +48,8 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlCuerpo = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dgvNovedades = new System.Windows.Forms.DataGridView();
             this.btnAgregaTipo = new System.Windows.Forms.Button();
             this.btnAgregaObra = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -57,8 +59,6 @@
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.dgvNovedades = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
             this.pnlBotonera.SuspendLayout();
             this.pnlEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -268,6 +268,43 @@
             this.pnlCuerpo.Size = new System.Drawing.Size(551, 352);
             this.pnlCuerpo.TabIndex = 2;
             // 
+            // label2
+            // 
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(4, 142);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(542, 18);
+            this.label2.TabIndex = 37;
+            this.label2.Text = "NOVEDADES DEL EQUIPO  SELECCIONADO";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // dgvNovedades
+            // 
+            this.dgvNovedades.AllowUserToAddRows = false;
+            this.dgvNovedades.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNovedades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvNovedades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvNovedades.Location = new System.Drawing.Point(3, 163);
+            this.dgvNovedades.Name = "dgvNovedades";
+            this.dgvNovedades.ReadOnly = true;
+            this.dgvNovedades.RowHeadersVisible = false;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            this.dgvNovedades.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvNovedades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvNovedades.Size = new System.Drawing.Size(545, 186);
+            this.dgvNovedades.TabIndex = 36;
+            this.dgvNovedades.DoubleClick += new System.EventHandler(this.dgvNovedades_DoubleClick);
+            // 
             // btnAgregaTipo
             // 
             this.btnAgregaTipo.Location = new System.Drawing.Point(255, 5);
@@ -347,42 +384,6 @@
             // toolTip1
             // 
             this.toolTip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(123)))), ((int)(((byte)(52)))));
-            // 
-            // dgvNovedades
-            // 
-            this.dgvNovedades.AllowUserToAddRows = false;
-            this.dgvNovedades.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNovedades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvNovedades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNovedades.Location = new System.Drawing.Point(3, 163);
-            this.dgvNovedades.Name = "dgvNovedades";
-            this.dgvNovedades.ReadOnly = true;
-            this.dgvNovedades.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dgvNovedades.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvNovedades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNovedades.Size = new System.Drawing.Size(545, 186);
-            this.dgvNovedades.TabIndex = 36;
-            // 
-            // label2
-            // 
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(4, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(542, 18);
-            this.label2.TabIndex = 37;
-            this.label2.Text = "NOVEDADES DEL EQUIPO  SELECCIONADO";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // frmNovedadEquipo
             // 

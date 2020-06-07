@@ -206,5 +206,10 @@ namespace Gest
         {
             cargaNovedades();
         }
+
+        private void dgvNovedades_DoubleClick(object sender, EventArgs e)
+        {
+            alModificar();
+        }
     }
 }
