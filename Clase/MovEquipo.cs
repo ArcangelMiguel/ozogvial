@@ -54,7 +54,7 @@ namespace Clases
         // Extrae todas las novedades por EQUIPO =======================================================
         public static DataTable buscarPorEquipo(int eqpo)
         {
-            String cmd = "SELECT  fecha, tipo, detalle, numero FROM movequipos " +
+            String cmd = "SELECT  id_MovEq, fecha, tipo, detalle, numero FROM movequipos " +
                 "WHERE id_Equipo= " + eqpo;
             // 
             DataSet ds = Accesos.datos(cmd); 
@@ -72,6 +72,20 @@ namespace Clases
             connn = Accesos.UnaConexion();
             MySqlCommand cmd = new MySqlCommand(String.Format("INSERT INTO movequipos(id_MovEq, fecha, id_Equipo, id_Obra, tipo, detalle, numero)" +
                 " VALUES ({0},'{1}',{2},{3},'{4}','{5}','{6}')", rep.IDMEQ, rep.FECHA, rep.EQUIPO, rep.OBRA, rep.TIPO, rep.DETALLE, rep.NUMERO), connn);
+
+            valor = cmd.ExecuteNonQuery();
+            connn.Close();
+            return valor;
+        }
+
+        // Almacena los datos del movimiento     =======================================================
+        public static int modifMovEquipo(MovEquipo rep, int orden)
+        {
+            // almacenamos la modificación del movimiento de equipo. 
+            int valor = 0;
+            MySqlConnection connn = new MySqlConnection();
+            connn = Accesos.UnaConexion();
+            MySqlCommand cmd = new MySqlCommand(String.Format("UPDATE movequipos SET id_MovEq='{0}', detalle='{1}', numero='{2}' where id_MovEq='{3}'", rep.IDMEQ, rep.DETALLE, rep.NUMERO, orden), connn);
 
             valor = cmd.ExecuteNonQuery();
             connn.Close();

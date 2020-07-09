@@ -7,12 +7,11 @@ using Conexiones;
 using System.Data;
 using MySql.Data.MySqlClient;
 
-namespace Clase
+namespace Clases
 {
-    class Empleado
+    public class Empleado
     {
         private int idEmpleado;
-        private String apellido;
         private String nombre;
         private String documento;
         private String cuil;
@@ -33,8 +32,7 @@ namespace Clase
         private int estado; 
         private String anota;
 
-        public int IDEMPLEADO { get => idEmpleado; set => idEmpleado = value; }
-        public String APELLIDO { get => apellido; set => apellido = value; }
+        public int IDEMPLEADO { get => idEmpleado; set => idEmpleado = value; }       
         public String NOMBRE { get => nombre; set => nombre = value; }
         public String DOCUMENTO { get => documento; set => documento = value; }
         public String CUIL { get => cuil; set => cuil = value; }
@@ -67,14 +65,23 @@ namespace Clase
             MySqlCommand cmd = new MySqlCommand(String.Format("INSERT INTO empleado(id_Empleado,apellido,nombre,documento,cuil,direccion,postal,ciudad,provincia,"+
                                      "alta, baja, nacimiento, telefono, correo, clave, id_Categoria, camisa, pantalon, zapato, id_Estado, anotaciones)" +
                                      " VALUES ({0},'{1}','{2}','{3}','{4}','{5}','{6}','{7}','{8}','{9}','{9}','{10}','{11}','{12}','{13}','{14}'"+
-                                     ",{15},'{16}','{17}','{18}',{19},'{20}'"+
-                                     ")", rep.IDEMPLEADO, rep.APELLIDO, rep.NOMBRE, rep.DOCUMENTO, rep.CUIL, rep.DIRECCION, rep.POSTAL, rep.CIUDAD, rep.PROVINCIA,
+                                     ",{15},'{16}','{17}','{18}',{19}"+
+                                     ")", rep.IDEMPLEADO, rep.NOMBRE, rep.DOCUMENTO, rep.CUIL, rep.DIRECCION, rep.POSTAL, rep.CIUDAD, rep.PROVINCIA,
                                      rep.ALTA, rep.BAJA, rep.NACIMIENTO, rep.TELEFONO, rep.CORREO, rep.CLAVE, rep.CATEGORIA, rep.CAMISA, rep.PANTALON, rep.ZAPATO,
                                      rep.ESTADO, rep.ANOTA), connn);
 
             valor = cmd.ExecuteNonQuery();
             connn.Close();
             return valor;
+        }
+        public static DataTable extraeEmpleadoCombo()
+        {
+            String cmd = "SELECT id_Empleado, nombre FROM empleados";
+            // 
+            DataSet ds = Accesos.datos(cmd);
+            DataTable dt = new DataTable();
+            dt = ds.Tables[0];
+            return dt;
         }
 
     }

@@ -56,5 +56,12 @@ namespace Gest
             frem.MdiParent = this;
             frem.Show();
         }
+
+        private void emitirReciboComunToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRecibos frec = new frmRecibos();
+            frec.MdiParent = this;
+            frec.Show();
+        }
     }
 }

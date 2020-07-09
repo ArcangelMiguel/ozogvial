@@ -42,6 +42,8 @@
             this.partesDiariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novedadesEquiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.remitosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.emitirReciboComunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -126,6 +128,7 @@
             this.movimientosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.partesDiariosToolStripMenuItem,
             this.novedadesEquiposToolStripMenuItem,
+            this.toolStripMenuItem3,
             this.remitosToolStripMenuItem});
             this.movimientosToolStripMenuItem.Name = "movimientosToolStripMenuItem";
             this.movimientosToolStripMenuItem.Size = new System.Drawing.Size(89, 20);
@@ -151,6 +154,21 @@
             this.remitosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.remitosToolStripMenuItem.Text = "Remitos";
             this.remitosToolStripMenuItem.Click += new System.EventHandler(this.remitosToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.emitirReciboComunToolStripMenuItem});
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem3.Text = "Recibos";
+            // 
+            // emitirReciboComunToolStripMenuItem
+            // 
+            this.emitirReciboComunToolStripMenuItem.Name = "emitirReciboComunToolStripMenuItem";
+            this.emitirReciboComunToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
+            this.emitirReciboComunToolStripMenuItem.Text = "Emitir Recibo Comun";
+            this.emitirReciboComunToolStripMenuItem.Click += new System.EventHandler(this.emitirReciboComunToolStripMenuItem_Click);
             // 
             // frmMain
             // 
@@ -187,5 +205,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem emitirReciboComunToolStripMenuItem;
     }
 }

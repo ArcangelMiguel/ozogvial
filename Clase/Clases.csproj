@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conversion.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="Equipo.cs" />
     <Compile Include="Material.cs" />
@@ -55,6 +56,7 @@
     <Compile Include="Obra.cs" />
     <Compile Include="Procede.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recibo.cs" />
     <Compile Include="Tema.cs" />
     <Compile Include="Tipo.cs" />
     <Compile Include="Validar.cs" />

@@ -17,11 +17,10 @@ namespace Gest
         {
             InitializeComponent();
         }
+        DateTime hoy = DateTime.Now; // habilito la fecha actual =======================
 
         private void frmNovedadEquipo_Load(object sender, EventArgs e)
         {
-            DateTime hoy = DateTime.Now;
-            lblFecha.Text = hoy.ToShortDateString();
             apertura();
 
             // cargamos el combo de los equipos
@@ -66,16 +65,19 @@ namespace Gest
 
         public void apertura()
         {
+            lblFecha.Text = hoy.ToShortDateString();
             btnAgregar.Enabled = true;
             btnGuardar.Enabled = false;
             btnCancelar.Enabled = false;
             btnBuscar.Enabled = true;
             btnActualizar.Enabled = false;
             btnSalir.Enabled = true;
-            pnlEncabezado.Enabled = false;
+            pnlEncabezado.Enabled = true;
+            cmbEquipo.Enabled = true;
             cmbObra.Enabled = false;
-            cmbTipo.Enabled = false;
+            cmbTipo.Enabled = false;cmbTipo.Text = "";
             txtDetalle.Enabled = false; txtDetalle.Text = "";
+            txtHoras.Enabled = false;txtHoras.Text = "";
             btnAgregaObra.Enabled = false;
             btnAgregaTipo.Enabled = false;
         }
@@ -91,7 +93,8 @@ namespace Gest
             cmbEquipo.Enabled = true;
             cmbObra.Enabled = true;
             cmbTipo.Enabled = true;
-            txtDetalle.Enabled = true; txtDetalle.Text = "";
+            txtDetalle.Enabled = true; txtDetalle.Text = ""; 
+            txtHoras.Enabled = true;
             btnAgregaObra.Enabled = true;
             btnAgregaTipo.Enabled = true;
         }
@@ -104,10 +107,10 @@ namespace Gest
             btnActualizar.Enabled = true;
             btnSalir.Enabled = false;
             pnlEncabezado.Enabled = true;
-            txtDetalle.Enabled = true;
-            cmbEquipo.Enabled = true;
-            cmbObra.Enabled = true;
-            cmbTipo.Enabled = true;
+            txtDetalle.Enabled = true; txtHoras.Enabled = true;
+            cmbEquipo.Enabled = false;
+            cmbObra.Enabled = false;
+            cmbTipo.Enabled = false;
             btnAgregaObra.Enabled = true;
             btnAgregaTipo.Enabled = true;
         }
@@ -117,18 +120,21 @@ namespace Gest
             dt = MovEquipo.buscarPorEquipo(int.Parse(cmbEquipo.SelectedValue.ToString()));
 
             dgvNovedades.DataSource = dt; dgvNovedades.ReadOnly = true;
-            dgvNovedades.Columns[0].HeaderText = "FECHA";
-            dgvNovedades.Columns[0].Width = 60;
+            dgvNovedades.Columns[0].HeaderText = "ORDEN";
+            dgvNovedades.Columns[0].Width = 40;
             dgvNovedades.Columns[0].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvNovedades.Columns[1].HeaderText = "TIPO";
-            dgvNovedades.Columns[1].Width = 100;
+            dgvNovedades.Columns[1].HeaderText = "FECHA";
+            dgvNovedades.Columns[1].Width = 60;
             dgvNovedades.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dgvNovedades.Columns[2].HeaderText = "DESCRIPCION";
-            dgvNovedades.Columns[2].Width = 280;
-            dgvNovedades.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dgvNovedades.Columns[3].HeaderText = "HORAS / KM";
-            dgvNovedades.Columns[3].Width = 85;
-            dgvNovedades.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvNovedades.Columns[2].HeaderText = "TIPO";
+            dgvNovedades.Columns[2].Width = 100;
+            dgvNovedades.Columns[2].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dgvNovedades.Columns[3].HeaderText = "DESCRIPCION";
+            dgvNovedades.Columns[3].Width = 280;
+            dgvNovedades.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dgvNovedades.Columns[4].HeaderText = "HORAS / KM";
+            dgvNovedades.Columns[4].Width = 85;
+            dgvNovedades.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
             //========================  ALGORITMOS DE BOTONERA =======================================
@@ -174,6 +180,34 @@ namespace Gest
             cargaNovedades();
         }
 
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            MovEquipo MEq = new MovEquipo();
+            int orden = int.Parse(dgvNovedades.CurrentRow.Cells[0].Value.ToString());
+            MEq.IDMEQ = orden;
+            MEq.DETALLE = txtDetalle.Text;
+            if (txtHoras.Text == "")
+            {
+                MEq.NUMERO = 0;
+            }
+            else
+            {
+                MEq.NUMERO = float.Parse(txtHoras.Text);
+            }
+            int res = MovEquipo.modifMovEquipo(MEq,orden);
+
+            if (res == 1)
+            {
+                MessageBox.Show("Datos almacenados");
+            }
+            else
+            {
+                MessageBox.Show("Los datos no se guardaron");
+            }
+            apertura();
+            cargaNovedades();
+        }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -210,6 +244,11 @@ namespace Gest
         private void dgvNovedades_DoubleClick(object sender, EventArgs e)
         {
             alModificar();
+            lblFecha.Text = dgvNovedades.CurrentRow.Cells[1].Value.ToString();
+            cmbTipo.Text = dgvNovedades.CurrentRow.Cells[2].Value.ToString();
+            txtDetalle.Text = dgvNovedades.CurrentRow.Cells[3].Value.ToString();
+            txtHoras.Text= dgvNovedades.CurrentRow.Cells[4].Value.ToString();
         }
+
     }
 }

@@ -30,8 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNovedadEquipo));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pnlBotonera = new System.Windows.Forms.Panel();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
@@ -41,8 +41,6 @@
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pnlEncabezado = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtHoras = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.cmbEquipo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
@@ -59,6 +57,8 @@
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.txtHoras = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnlBotonera.SuspendLayout();
             this.pnlEncabezado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -124,6 +124,7 @@
             this.btnActualizar.Text = "Actualizar Datos";
             this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnCancelar
             // 
@@ -174,8 +175,6 @@
             // 
             this.pnlEncabezado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(167)))), ((int)(((byte)(171)))), ((int)(((byte)(201)))));
             this.pnlEncabezado.Controls.Add(this.pictureBox1);
-            this.pnlEncabezado.Controls.Add(this.txtHoras);
-            this.pnlEncabezado.Controls.Add(this.label4);
             this.pnlEncabezado.Controls.Add(this.cmbEquipo);
             this.pnlEncabezado.Controls.Add(this.label3);
             this.pnlEncabezado.Controls.Add(this.lblFecha);
@@ -183,7 +182,7 @@
             this.pnlEncabezado.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlEncabezado.Location = new System.Drawing.Point(117, 0);
             this.pnlEncabezado.Name = "pnlEncabezado";
-            this.pnlEncabezado.Size = new System.Drawing.Size(551, 72);
+            this.pnlEncabezado.Size = new System.Drawing.Size(551, 56);
             this.pnlEncabezado.TabIndex = 1;
             // 
             // pictureBox1
@@ -196,27 +195,10 @@
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             // 
-            // txtHoras
-            // 
-            this.txtHoras.Location = new System.Drawing.Point(319, 38);
-            this.txtHoras.Name = "txtHoras";
-            this.txtHoras.Size = new System.Drawing.Size(109, 20);
-            this.txtHoras.TabIndex = 27;
-            this.txtHoras.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtHoras_KeyPress);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(253, 40);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 13);
-            this.label4.TabIndex = 26;
-            this.label4.Text = "Horas / km :";
-            // 
             // cmbEquipo
             // 
             this.cmbEquipo.FormattingEnabled = true;
-            this.cmbEquipo.Location = new System.Drawing.Point(85, 37);
+            this.cmbEquipo.Location = new System.Drawing.Point(84, 27);
             this.cmbEquipo.Name = "cmbEquipo";
             this.cmbEquipo.Size = new System.Drawing.Size(155, 21);
             this.cmbEquipo.TabIndex = 25;
@@ -225,7 +207,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 40);
+            this.label3.Location = new System.Drawing.Point(4, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 24;
@@ -252,6 +234,8 @@
             // 
             // pnlCuerpo
             // 
+            this.pnlCuerpo.Controls.Add(this.txtHoras);
+            this.pnlCuerpo.Controls.Add(this.label4);
             this.pnlCuerpo.Controls.Add(this.label2);
             this.pnlCuerpo.Controls.Add(this.dgvNovedades);
             this.pnlCuerpo.Controls.Add(this.btnAgregaTipo);
@@ -263,9 +247,9 @@
             this.pnlCuerpo.Controls.Add(this.cmbTipo);
             this.pnlCuerpo.Controls.Add(this.label5);
             this.pnlCuerpo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlCuerpo.Location = new System.Drawing.Point(117, 72);
+            this.pnlCuerpo.Location = new System.Drawing.Point(117, 56);
             this.pnlCuerpo.Name = "pnlCuerpo";
-            this.pnlCuerpo.Size = new System.Drawing.Size(551, 352);
+            this.pnlCuerpo.Size = new System.Drawing.Size(551, 368);
             this.pnlCuerpo.TabIndex = 2;
             // 
             // label2
@@ -273,7 +257,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(4, 142);
+            this.label2.Location = new System.Drawing.Point(4, 149);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(542, 18);
             this.label2.TabIndex = 37;
@@ -284,24 +268,24 @@
             // 
             this.dgvNovedades.AllowUserToAddRows = false;
             this.dgvNovedades.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvNovedades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvNovedades.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvNovedades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNovedades.Location = new System.Drawing.Point(3, 163);
+            this.dgvNovedades.Location = new System.Drawing.Point(3, 168);
             this.dgvNovedades.Name = "dgvNovedades";
             this.dgvNovedades.ReadOnly = true;
             this.dgvNovedades.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            this.dgvNovedades.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            this.dgvNovedades.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvNovedades.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvNovedades.Size = new System.Drawing.Size(545, 186);
+            this.dgvNovedades.Size = new System.Drawing.Size(545, 197);
             this.dgvNovedades.TabIndex = 36;
             this.dgvNovedades.DoubleClick += new System.EventHandler(this.dgvNovedades_DoubleClick);
             // 
@@ -331,7 +315,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(3, 39);
+            this.label7.Location = new System.Drawing.Point(3, 63);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(542, 18);
             this.label7.TabIndex = 33;
@@ -340,11 +324,11 @@
             // 
             // txtDetalle
             // 
-            this.txtDetalle.Location = new System.Drawing.Point(0, 60);
+            this.txtDetalle.Location = new System.Drawing.Point(0, 82);
             this.txtDetalle.Multiline = true;
             this.txtDetalle.Name = "txtDetalle";
             this.txtDetalle.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.txtDetalle.Size = new System.Drawing.Size(548, 79);
+            this.txtDetalle.Size = new System.Drawing.Size(548, 66);
             this.txtDetalle.TabIndex = 32;
             // 
             // cmbObra
@@ -385,6 +369,22 @@
             // 
             this.toolTip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(133)))), ((int)(((byte)(123)))), ((int)(((byte)(52)))));
             // 
+            // txtHoras
+            // 
+            this.txtHoras.Location = new System.Drawing.Point(84, 33);
+            this.txtHoras.Name = "txtHoras";
+            this.txtHoras.Size = new System.Drawing.Size(109, 20);
+            this.txtHoras.TabIndex = 39;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 33);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(66, 13);
+            this.label4.TabIndex = 38;
+            this.label4.Text = "Horas / km :";
+            // 
             // frmNovedadEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -424,8 +424,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lblFecha;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtHoras;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDetalle;
@@ -439,5 +437,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvNovedades;
+        private System.Windows.Forms.TextBox txtHoras;
+        private System.Windows.Forms.Label label4;
     }
 }

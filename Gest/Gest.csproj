@@ -125,6 +125,12 @@
     <Compile Include="frmProveedor.Designer.cs">
       <DependentUpon>frmProveedor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRecibos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRecibos.Designer.cs">
+      <DependentUpon>frmRecibos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRemitos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmProveedor.resx">
       <DependentUpon>frmProveedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRecibos.resx">
+      <DependentUpon>frmRecibos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRemitos.resx">
       <DependentUpon>frmRemitos.cs</DependentUpon>
