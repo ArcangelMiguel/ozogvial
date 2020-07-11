@@ -96,3 +96,5 @@ C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.csproj.CoreCo
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.csproj.CopyComplete
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.exe
 C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.pdb
+C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.frmRecibos.resources
+C:\Users\OZOG VIAL SRL\source\repos\ozogvial\Gest\obj\Release\Gest.frmRemitos.resources
